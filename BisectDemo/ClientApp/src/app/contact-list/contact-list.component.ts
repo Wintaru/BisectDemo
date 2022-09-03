@@ -26,4 +26,5 @@ export class ContactListComponent implements OnInit {
 interface Contact {
   firstName: string;
   lastName: string;
+  address1: string;
 }

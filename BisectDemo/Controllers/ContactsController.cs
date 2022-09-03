@@ -8,10 +8,10 @@ public class ContactsController : ControllerBase
 {
     private static readonly Contact[] ContactList = new[]
     {
-        new Contact("Josh", "Donner"),
-        new Contact("Jacqui", "Donner"),
-        new Contact("Ford", "Prefect"),
-        new Contact("Zaphod", "Beeblebrox")
+        new Contact("Josh", "Donner", "2320 S Canterbury Lane"),
+        new Contact("Jacqui", "Donner", address1: "2320 S Canterbury Lane"),
+        new Contact("Ford", "Prefect", address1: "Surface of Magrathea"),
+        new Contact("Zaphod", "Beeblebrox", address1: "Surface of Magrathea")
     };
 
     private readonly ILogger<ContactsController> _logger;
