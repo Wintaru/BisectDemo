@@ -232,3 +232,6 @@ _Pvt_Extensions
 
 # Angular build files
 ClientApp/.angular/
+
+# JetBrains stuff
+.idea
