@@ -8,10 +8,38 @@ public class ContactsController : ControllerBase
 {
     private static readonly Contact[] ContactList = new[]
     {
-        new Contact("Josh", "Donner", "2320 S Canterbury Lane", "", "Lincoln", "NE"),
-        new Contact("Jacqui", "Donner", address1: "2320 S Canterbury Lane", "", "Lincoln", "NE"),
-        new Contact("Ford", "Prefect", address1: "Surface of Magrathea", "", "Heart of Gold", "N/A"),
-        new Contact("Zaphod", "Beeblebrox", address1: "Surface of Magrathea", "", "Heart of Gold", "N/A")
+        new Contact(
+            "Josh",
+            "Donner",
+            "2320 S Canterbury Lane",
+            "",
+            "Lincoln",
+            "NE",
+            "68512"),
+        new Contact(
+            "Jacqui",
+            "Donner",
+            "2320 S Canterbury Lane",
+            "",
+            "Lincoln",
+            "NE",
+            "68512"),
+        new Contact(
+            "Ford",
+            "Prefect",
+            "Surface of Magrathea",
+            "",
+            "Heart of Gold",
+            "N/A",
+            "N/A"),
+        new Contact(
+            "Zaphod",
+            "Beeblebrox",
+            "Surface of Magrathea",
+            "",
+            "Heart of Gold",
+            "N/A",
+            "N/A")
     };
 
     private readonly ILogger<ContactsController> _logger;

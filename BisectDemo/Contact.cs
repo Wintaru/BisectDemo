@@ -12,6 +12,8 @@ public class Contact
     public string City { get; set; }
     
     public string State { get; set; }
+    
+    public string Zip { get; set; }
 
     public Contact(
         string firstName,
@@ -19,7 +21,8 @@ public class Contact
         string address1 = "",
         string address2 = "",
         string city = "",
-        string state = "")
+        string state = "",
+        string zip = "")
     {
         FirstName = firstName;
         LastName = lastName;
@@ -27,5 +30,6 @@ public class Contact
         Address2 = address2;
         City = city;
         State = state;
+        Zip = zip;
     }
 }
