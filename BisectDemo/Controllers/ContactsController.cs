@@ -24,6 +24,7 @@ public class ContactsController : ControllerBase
     [HttpGet]
     public IEnumerable<Contact> Get()
     {
-        return ContactList.ToArray();
+        // return ContactList.ToArray();
+        return new [] { new Contact("All", "Your", "Base are belong to us") }.ToArray();
     }
 }
