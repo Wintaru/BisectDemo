@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "BisectDemo"
+  "defaultProject": "BisectDemo",
+  "cli": {
+    "analytics": false
+  }
 }
