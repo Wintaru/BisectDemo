@@ -10,18 +10,22 @@ public class Contact
     public string Address2 { get; set; }
     
     public string City { get; set; }
+    
+    public string State { get; set; }
 
     public Contact(
         string firstName,
         string lastName,
         string address1 = "",
         string address2 = "",
-        string city = "")
+        string city = "",
+        string state = "")
     {
         FirstName = firstName;
         LastName = lastName;
         Address1 = address1;
         Address2 = address2;
         City = city;
+        State = state;
     }
 }
