@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-contact-list',
@@ -7,8 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./contact-list.component.css']
 })
 export class ContactListComponent implements OnInit {
-
-  constructor(private router: Router) { }
+  public contactList: Contact[] = [];
+  constructor(private router: Router, http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
+    http.get<Contact[]>(baseUrl + 'contacts').subscribe( result => {
+      this.contactList = result;
+    }, error => console.error(error));
+  }
 
   ngOnInit() {
   }
@@ -16,4 +21,9 @@ export class ContactListComponent implements OnInit {
   openClient(id: number) {
     this.router.navigate(["contactdetail", id.toString()]);
   }
+}
+
+interface Contact {
+  firstName: string;
+  lastName: string;
 }

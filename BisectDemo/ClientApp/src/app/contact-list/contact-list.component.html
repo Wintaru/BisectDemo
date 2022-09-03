@@ -1,26 +1,18 @@
-<table class="table table-striped">
+<h1 id="tableLabel">Contact List</h1>
+
+<p *ngIf="!contactList"><em>Loading...</em></p>
+
+<table class="table table-striped" aria-labelledby="tableLabel" *ngIf="contactList">
   <thead>
-  <tr>
-    <th scope="col">First</th>
-    <th scope="col">Last</th>
-    <th scope="col">Twitter</th>
-  </tr>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
   </thead>
   <tbody>
-  <tr (click)="openClient(1)">
-    <td>Chad</td>
-    <td>Michel</td>
-    <td>@chadmichel</td>
-  </tr>
-  <tr (click)="openClient(2)">
-    <td>Bill</td>
-    <td>Udell</td>
-    <td>@billudell</td>
-  </tr>
-  <tr (click)="openClient(3)">
-    <td>Russ</td>
-    <td>Guill</td>
-    <td>@russwritesne</td>
-  </tr>
+    <tr *ngFor="let contact of contactList">
+      <td>{{ contact.firstName }}</td>
+      <td>{{ contact.lastName }}</td>
+    </tr>
   </tbody>
 </table>

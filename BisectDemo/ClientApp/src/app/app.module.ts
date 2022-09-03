@@ -17,8 +17,7 @@ import { EventDetailComponent } from './event-detail/event-detail.component';
 const appRoutes: Routes = [
   { path: 'contactlist', component: ContactListComponent },
   { path: 'contactdetail/:id', component: ContactDetailComponent },
-  { path: 'eventlist', component: EventListComponent },
-  { path: '***', redirectTo: 'contactlist' }
+  { path: 'eventlist', component: EventListComponent }
 ];
 
 @NgModule({
