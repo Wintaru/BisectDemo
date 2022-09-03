@@ -28,4 +28,5 @@ interface Contact {
   lastName: string;
   address1: string;
   address2: string;
+  city: string;
 }
