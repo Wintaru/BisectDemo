@@ -31,4 +31,5 @@ interface Contact {
   city: string;
   state: string;
   zip: string;
+  company: string;
 }
