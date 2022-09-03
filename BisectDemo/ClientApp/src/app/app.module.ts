@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -13,6 +13,13 @@ import { ContactListComponent } from './contact-list/contact-list.component';
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
 import { EventListComponent } from './event-list/event-list.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
+
+const appRoutes: Routes = [
+  { path: 'contactlist', component: ContactListComponent },
+  { path: 'contactdetail/:id', component: ContactDetailComponent },
+  { path: 'eventlist', component: EventListComponent },
+  { path: '***', redirectTo: 'contactlist' }
+];
 
 @NgModule({
   declarations: [
@@ -30,11 +37,10 @@ import { EventDetailComponent } from './event-detail/event-detail.component';
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
-    ])
+    RouterModule.forRoot(
+      appRoutes,
+       { enableTracing: true }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
