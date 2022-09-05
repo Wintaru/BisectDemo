@@ -24,6 +24,7 @@ export class ContactListComponent implements OnInit {
 }
 
 interface Contact {
+  id: number;
   firstName: string;
   lastName: string;
   address1: string;
