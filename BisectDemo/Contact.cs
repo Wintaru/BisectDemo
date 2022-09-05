@@ -2,6 +2,7 @@ namespace BisectDemo;
 
 public class Contact
 {
+    public int ID { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
     
@@ -25,8 +26,10 @@ public class Contact
         string city = "",
         string state = "",
         string zip = "",
-        string company = "")
+        string company = "",
+        int id = -1)
     {
+        ID = id;
         FirstName = firstName;
         LastName = lastName;
         Address1 = address1;

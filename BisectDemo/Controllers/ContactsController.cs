@@ -16,7 +16,8 @@ public class ContactsController : ControllerBase
             "Lincoln",
             "NE",
             "68512",
-            "Don't Panic Labs"),
+            "Don't Panic Labs",
+            0),
         new Contact(
             "Jacqui",
             "Donner",
@@ -25,7 +26,8 @@ public class ContactsController : ControllerBase
             "Lincoln",
             "NE",
             "68512",
-            "TELCOR"),
+            "TELCOR",
+            1),
         new Contact(
             "Ford",
             "Prefect",
@@ -34,7 +36,8 @@ public class ContactsController : ControllerBase
             "Heart of Gold",
             "N/A",
             "N/A",
-            "?"),
+            "?",
+            2),
         new Contact(
             "Zaphod",
             "Beeblebrox",
@@ -43,7 +46,8 @@ public class ContactsController : ControllerBase
             "Heart of Gold",
             "N/A",
             "N/A",
-            "President")
+            "President",
+            3)
     };
 
     private readonly ILogger<ContactsController> _logger;
